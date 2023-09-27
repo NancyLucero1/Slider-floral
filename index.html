@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Spring</title>
+</head>
+<body>
+    <img name="slider"  width="600" height="400">
+
+    <script>
+    window.addEventListener ('load' , function () {
+       console.log( 'el contenido cargado');
+
+       let imagenes = [  ];
+
+       imagenes [0] = 'image/1.jpg';  
+       imagenes [1] = "image/2.jpg";
+       imagenes [2] = "image/3.jpg";
+       imagenes [3] = "image/4.jpg";
+       
+      
+       let indiceImagenes = 0 ;
+       const tiempo = 1000 ;
+
+       function cambiarImagenes () { 
+        document.slider.src =  imagenes [indiceImagenes];
+           if (indiceImagenes < 3 ) { indiceImagenes ++; 
+       }
+          else { indiceImagenes = 0; 
+       }
+    }
+ 
+       setInterval (cambiarImagenes,tiempo );   
+      
+    });
+
+   </script>
+</body>
+
+
+</html>
